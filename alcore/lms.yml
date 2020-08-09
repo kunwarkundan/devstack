@@ -90,7 +90,7 @@ CACHES:
         KEY_FUNCTION: util.memcache.safe_key
         KEY_PREFIX: mongo_metadata_inheritance
         LOCATION:
-        - edx.devstack.memcached:11211
+        - edx.devstack.memcached:11211ENABLE_THIRD_PARTY_AUTH
         TIMEOUT: 300
     staticfiles:
         BACKEND: django.core.cache.backends.memcached.MemcachedCache
@@ -519,7 +519,7 @@ SESSION_COOKIE_NAME: sessionid
 SESSION_COOKIE_SECURE: false
 SESSION_SAVE_EVERY_REQUEST: false
 SITE_NAME: localhost
-SOCIAL_AUTH_OAUTH_SECRETS: ''
+SOCIAL_AUTH_OAUTH_SECRETS: { "azuread-oauth2": "~fGo-Jrcv94~Q1dLE6622mH9x~6w1Pvs9_" }
 SOCIAL_AUTH_SAML_SP_PRIVATE_KEY: ''
 SOCIAL_AUTH_SAML_SP_PRIVATE_KEY_DICT: {}
 SOCIAL_AUTH_SAML_SP_PUBLIC_CERT: ''
