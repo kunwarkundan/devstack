@@ -147,7 +147,6 @@ include compatibility.mk
 
 # Include local, git-ignored Makefile with additional targets.
 -include local.mk  # Prefix with hyphen to tolerate absence of file.
--include alcore.mk
 
 ########################################################################################
 # Targets for managing the Devstack repo itself.
@@ -620,3 +619,6 @@ up-marketing-sync: ## Bring up all services (including the marketing site) with 
 
 clean-marketing-sync: ## Remove the docker-sync containers for all services (including the marketing site).
 	docker-sync-stack clean -c docker-sync-marketing-site.yml
+
+# Include alcore commands
+-include alcore.mk

@@ -260,11 +260,11 @@ ELASTIC_SEARCH_CONFIG:
     port: 9200
     use_ssl: false
 EMAIL_BACKEND: django.core.mail.backends.smtp.EmailBackend
-EMAIL_HOST: localhost
-EMAIL_HOST_PASSWORD: ''
-EMAIL_HOST_USER: ''
-EMAIL_PORT: 25
-EMAIL_USE_TLS: false
+EMAIL_HOST: smtp.office365.com
+EMAIL_HOST_PASSWORD: 'f0underc0re.te@m'
+EMAIL_HOST_USER: 'team@foundercore.org'
+EMAIL_PORT: 587
+EMAIL_USE_TLS: true
 ENABLE_COMPREHENSIVE_THEMING: true
 ENTERPRISE_API_URL: http://edx.devstack.lms:18000/enterprise/api/v1
 ENTERPRISE_COURSE_ENROLLMENT_AUDIT_MODES:
