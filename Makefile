@@ -60,7 +60,7 @@
         dev.up.with-watchers dev.validate e2e-tests e2e-tests.with-shell \
         feature-toggle-state help requirements selfcheck upgrade upgrade \
         up-marketing-sync validate-lms-volume vnc-passwords
-        
+
 # Load up options (configurable through options.local.mk).
 include options.mk
 
@@ -147,7 +147,7 @@ include compatibility.mk
 
 # Include local, git-ignored Makefile with additional targets.
 -include local.mk  # Prefix with hyphen to tolerate absence of file.
-
+-include alcore.mk
 
 ########################################################################################
 # Targets for managing the Devstack repo itself.
@@ -218,7 +218,7 @@ dev.provision: dev.check-memory ## Provision dev environment with default servic
 	# it's just a way to tell ./provision.sh that the fake data for end-to-end
 	# tests should be prepared.
 	$(WINPTY) bash ./provision.sh $(DEFAULT_SERVICES)+e2e
-	make dev.stop	
+	make dev.stop
 
 dev.provision.%: ## Provision specified services.
 	echo $*
