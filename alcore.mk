@@ -12,3 +12,5 @@ service.config.studio.put:
 
 dev.rebuild.lms: service.config.lms.put dev.static.lms dev.restart-devserver.lms
 dev.rebuild.studio: service.config.studio.put dev.static.studio dev.restart-devserver.studio
+
+dev.rebuild.all: dev.rebuild.lms dev.rebuild.studio
